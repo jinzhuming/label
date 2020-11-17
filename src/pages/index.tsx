@@ -2,7 +2,7 @@ import { useCreateShapeLayer } from '@/components/canvas/Layer';
 import { useCreateRect } from '@/components/canvas/Rect';
 import { useStage } from '@/components/canvas/Stage';
 import { useIntl } from 'umi';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 export default () => {
   // 国际化
@@ -21,6 +21,7 @@ export default () => {
     <div>
       <div>
         <button
+          type="button"
           onClick={() => {
             updateCreateState(!creating);
           }}
@@ -33,7 +34,7 @@ export default () => {
           )}
         </button>
       </div>
-      <div css={{ width: '100%', height: 500 }}>{Canvas}</div>;
+      <div css={{ width: '100%', height: 500 }}>{Canvas}</div>
     </div>
   );
 };

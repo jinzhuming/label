@@ -11,5 +11,9 @@ export default defineConfig({
     baseNavigator: true,
     baseSeparator: '-',
   },
+  alias: {
+    '@': '/src',
+    '@@': '/src/.umi',
+  },
   extraBabelPresets: ['@emotion/babel-preset-css-prop'],
 });
